@@ -11,17 +11,24 @@ let package = Package(
   products: [
     .library(
       name: "VeriffNFC",
-      targets: ["VeriffNFC"]
+      targets: ["VeriffNFCTarget"]
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/Veriff/veriff-ios-spm", .exact("8.0.0"))
+    .package(url: "https://github.com/krzyzanowskim/OpenSSL-Package.git", from: "3.3.2000")
   ],
   targets: [
     .binaryTarget(
       name: "VeriffNFC",
-      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/8.0.0/veriffnfcsdk-8.0.0.zip",
-      checksum: "94629fa9889e8bf385a6461b0722bb5d6ee939e5fd282c996fa07affdf215b94"
+      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/8.1.0/veriffnfcsdk-8.1.0.zip",
+      checksum: "f0a2512e64ea5f391cf53bce732bc6502a69e79ced89cbe894ce2df8fab1ed63"
+    ),
+    .target(
+      name: "VeriffNFCTarget",
+      dependencies: [
+        .target(name: "VeriffNFC"),
+        .product(name: "OpenSSL", package: "OpenSSL-Package")
+      ]
     )
   ]
 )
