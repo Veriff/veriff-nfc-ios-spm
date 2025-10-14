@@ -20,8 +20,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "VeriffNFC",
-      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/8.7.0/veriffnfcsdk-8.7.0.zip",
-      checksum: "1b14163e7a28c64487e2c2fc96e032a1ce1f102857850119fc1d47c7c590bda4"
+      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/8.8.0/veriffnfcsdk-8.8.0.zip",
+      checksum: "3e8ef50dd32c9c326e0f882b4b169f572cb82b5285daebb927eaf52ee6c5cd59"
     ),
     .target(
       name: "VeriffNFCTarget",
