@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "VeriffNFC",
   platforms: [
-    .iOS(.v13)
+    .iOS(.v15)
   ],
   products: [
     .library(
@@ -20,8 +20,8 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "VeriffNFC",
-      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/9.1.1/veriffnfcsdk-9.1.1.zip",
-      checksum: "32d4374d67b2db72762a60fa40c899c8dffbd398c7adfeefd21eb15865104740"
+      url: "https://cdn.veriff.me/ios/com/veriff/veriffnfcsdk/10.1.0/veriffnfcsdk-10.1.0.zip",
+      checksum: "1c9c4bddacfa8c22a079f22cf3593f427beb38a81d19aac0919ef9a24975a66c"
     ),
     .target(
       name: "VeriffNFCTarget",
